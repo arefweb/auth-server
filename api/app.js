@@ -40,7 +40,7 @@ app.post("/login", (req, res)=>{
   
   const { email, pass } = req.body;
   
-  const content = fs.readFileSync("./users.json");
+  const content = fs.readFileSync("./api/users.json");
   let users = JSON.parse(content);
   let candid = users.users.find((item, i) => {
     return item.email == email;
